@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+.subtitle { margin-top: 6px; opacity: .8; }
+
+.nav { display: flex; gap: 16px; margin-top: 12px; }
+.nav a { text-decoration: none; border-bottom: 1px solid transparent; }
+.nav a:hover { border-bottom-color: currentColor; }
+
+.card { padding: 16px; border: 1px solid #ddd; border-radius: 12px; margin: 16px 0; }
+.footer { opacity: .7; }
