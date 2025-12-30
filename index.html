@@ -3,119 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NOVRISE｜個人履歷</title>
-  <link rel="stylesheet" href="src/styles/main.css" />
+  <title>Novrise | 履歷</title>
+  <link rel="icon" href="./assets/icons/logo.png" />
+  <link rel="stylesheet" href="./src/styles/main.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#home">NOVRISE</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">
+        <img class="brand-logo" src="./assets/icons/logo.png" alt="Novrise" />
+        <span class="brand-name">Novrise</span>
+      </a>
 
       <nav class="nav">
-        <a href="#about">關於我</a>
-        <a href="#skills">技能</a>
-        <a href="#projects">作品</a>
-        <a href="#contact">聯絡</a>
+        <a href="./index.html" class="nav-link is-active">首頁</a>
+        <a href="./pages/projects.html" class="nav-link">作品集</a>
+        <a href="./pages/contact.html" class="nav-link">聯絡我</a>
       </nav>
     </div>
   </header>
 
-  <main id="home">
+  <!-- Hero -->
+  <main class="container">
     <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <p class="badge">Resume Site</p>
-          <h1>陳佑杰（NOVRISE）</h1>
-          <p class="subtitle">
-            個人履歷網站｜先把首頁跑起來，再逐步補齊內容（作品、預約系統、部署）
-          </p>
-
-          <div class="cta">
-            <a class="btn primary" href="#projects">看作品</a>
-            <a class="btn" href="#contact">聯絡我</a>
-          </div>
-
-          <p class="meta">
-            <span id="buildInfo">Build: -</span>
-          </p>
-        </div>
-
-        <div class="hero__card">
-          <h2>快速資訊</h2>
-          <ul class="list">
-            <li><b>定位：</b>全端／系統整合（可依你實際調整）</li>
-            <li><b>技術：</b>HTML / CSS / JavaScript / Git / Nginx / MariaDB</li>
-            <li><b>目前：</b>先做網站架構 → 再做版本控制與對外部署</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2>關於我</h2>
-        <p>
-          這裡放你的自我介紹。先用 3~5 句，之後再慢慢補完整。
+      <div class="hero-text">
+        <p class="badge">Resume / Portfolio</p>
+        <h1>陳佑杰（alger.chen）</h1>
+        <p class="subtitle">
+          這裡是我的個人履歷網站：簡介、技能、作品集與聯絡方式。
         </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="./pages/projects.html">看作品集</a>
+          <a class="btn" href="./pages/contact.html">聯絡我</a>
+        </div>
+
+        <ul class="quick">
+          <li>📍 Taiwan</li>
+          <li>🧩 Web / Infra / Automation</li>
+          <li>🛠️ GitHub + Nginx + MariaDB（可延伸）</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h2>目前進度</h2>
+        <ol>
+          <li>專案初始化 & 分支：完成</li>
+          <li>目錄結構：完成</li>
+          <li>首頁：進行中 ✅</li>
+          <li>作品集頁 / 聯絡頁：下一步</li>
+        </ol>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>技能</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>前端</h3>
-            <p>HTML / CSS / JavaScript</p>
-          </div>
-          <div class="card">
-            <h3>後端／服務</h3>
-            <p>之後要做：API、預約查詢系統</p>
-          </div>
-          <div class="card">
-            <h3>部署</h3>
-            <p>Nginx / Cloudflare / GitHub</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Sections -->
+    <section class="grid">
+      <article class="card">
+        <h3>關於我</h3>
+        <p>用 3~5 句話描述你做過什麼、擅長什麼、想往哪裡走。</p>
+      </article>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>作品</h2>
-        <div class="grid">
-          <a class="card link" href="#" onclick="return false;">
-            <h3>履歷網站（本專案）</h3>
-            <p>先完成首頁，再擴充其他頁與內容。</p>
-          </a>
-          <a class="card link" href="#" onclick="return false;">
-            <h3>預約查詢系統（規劃中）</h3>
-            <p>下一階段：資料表、後端 API、管理介面。</p>
-          </a>
-        </div>
-      </div>
-    </section>
+      <article class="card">
+        <h3>技能</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>HTML / CSS / JavaScript</li>
+          <li>Nginx / Linux</li>
+          <li>MariaDB（可選）</li>
+        </ul>
+      </article>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>聯絡</h2>
-        <p>你可以把 Email / GitHub / LinkedIn 放在這裡。</p>
-        <div class="contact">
-          <a class="btn" href="#" onclick="return false;">Email</a>
-          <a class="btn" href="#" onclick="return false;">GitHub</a>
-        </div>
-      </div>
+      <article class="card">
+        <h3>近期作品（預告）</h3>
+        <p>之後在「作品集」頁面放你的專案列表與截圖。</p>
+      </article>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span>© <span id="year"></span> NOVRISE</span>
-      <span class="dim">Built with HTML / CSS / JS</span>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="y"></span> Novrise</span>
+      <a href="https://github.com/tges920119-yjc" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   </footer>
 
-  <script src="src/main.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>
