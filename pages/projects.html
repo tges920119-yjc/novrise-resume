@@ -3,126 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Novrise｜個人履歷</title>
-  <meta name="description" content="Novrise 個人履歷網站：作品、技能與聯絡方式。" />
-  <link rel="icon" href="./assets/icons/logo.png" />
+  <title>Novrise｜Resume / Portfolio</title>
+  <meta name="description" content="Novrise 的履歷 / 作品集網站（Git + GitHub Pages + 分支流程）" />
+
+  <!-- ✅ root: ./src/... -->
   <link rel="stylesheet" href="./src/styles/main.css" />
   <script defer src="./src/main.js"></script>
 </head>
 
 <body>
-  <!-- Header -->
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html" aria-label="Go to Home">
+      <a class="brand" href="./index.html" aria-label="回到首頁">
         <img class="brand-logo" src="./assets/icons/logo.png" alt="Novrise logo" />
-        <span class="brand-name">Novrise</span>
+        <span class="brand-text">Novrise</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav-link" href="./index.html" data-nav="home">Home</a>
-        <a class="nav-link" href="./pages/projects.html" data-nav="projects">Projects</a>
-        <a class="nav-link" href="./pages/contact.html" data-nav="contact">Contact</a>
+      <nav class="site-nav" aria-label="主選單">
+        <a class="nav-link is-active" href="./index.html">Home</a>
+        <a class="nav-link" href="./pages/projects.html">Projects</a>
+        <a class="nav-link" href="./pages/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="container">
+  <main id="main">
     <section class="hero">
-      <div class="hero-left">
-        <p class="badge">Resume / Portfolio</p>
+      <div class="container hero-inner">
+        <p class="eyebrow">Resume / Portfolio</p>
+
         <h1 class="hero-title">
           嗨，我是 <span class="accent">Novrise</span><br />
           我做可維護、可部署的網站作品
         </h1>
+
         <p class="hero-desc">
-          這個站點使用 Git + GitHub Pages 發佈。開發在 dev 分支，完成後用 PR 合併到 main。
-          <br />
+          這個站點使用 Git + GitHub Pages 發佈。開發在 <b>dev</b> 分支，完成後用 PR 合併到 <b>main</b>。
           你可以在 Projects 看到作品卡片與技術棧。
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-cta">
           <a class="btn primary" href="./pages/projects.html">看 Projects</a>
           <a class="btn" href="./pages/contact.html">聯絡我</a>
         </div>
 
-        <div class="mini-grid">
-          <div class="mini-card">
-            <div class="mini-title">技能</div>
-            <div class="mini-text">HTML / CSS / JavaScript / Git</div>
+        <div class="hero-grid">
+          <div class="card">
+            <h2 class="card-title">技能</h2>
+            <p class="card-text">HTML / CSS / JavaScript / Git</p>
           </div>
-          <div class="mini-card">
-            <div class="mini-title">部署</div>
-            <div class="mini-text">GitHub Pages</div>
+          <div class="card">
+            <h2 class="card-title">部署</h2>
+            <p class="card-text">GitHub Pages</p>
           </div>
-          <div class="mini-card">
-            <div class="mini-title">流程</div>
-            <div class="mini-text">dev → PR → main</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="panel">
-          <h2 class="panel-title">快速導覽</h2>
-          <ul class="panel-list">
-            <li>✅ 首頁：簡介 + 入口</li>
-            <li>✅ Projects：作品卡片（Live / Code）</li>
-            <li>✅ Contact：聯絡資訊</li>
-          </ul>
-
-          <div class="panel-note">
-            <div class="note-title">下一步建議</div>
-            <div class="note-text">
-              把 Projects 的第二張卡片改成你的真實專案（名稱、描述、技術、連結）。
-            </div>
+          <div class="card">
+            <h2 class="card-title">流程</h2>
+            <p class="card-text">dev → PR → main</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">關於我</h2>
-      <p class="section-desc">
-        這裡放 3～6 行你最想讓人記住的內容：你擅長什麼、想解決什麼問題、你做過哪些成果。
-        之後也可以加上「經歷」與「技能清單」等區塊。
-      </p>
+      <div class="container">
+        <h2 class="section-title">快速導覽</h2>
+        <ul class="checklist">
+          <li>✅ Home：簡介 + 入口</li>
+          <li>✅ Projects：作品卡（Live / Code）</li>
+          <li>✅ Contact：聯絡資訊</li>
+        </ul>
 
-      <div class="card-row">
-        <article class="card">
-          <h3 class="card-title">我能做什麼</h3>
-          <p class="card-text">
-            做出可展示的作品、乾淨的版面、清楚的導覽結構，並且用 Git 管理版本與部署。
+        <div class="callout">
+          <h3 class="callout-title">下一步建議</h3>
+          <p class="callout-text">
+            把 Projects 的第二張卡片改成你的真實專案（名稱、描述、技術、連結）。
           </p>
-        </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="card">
-          <h3 class="card-title">我重視什麼</h3>
-          <p class="card-text">
-            結構清楚、維護容易、改版不痛苦（檔案切分、CSS 可重用、JS 少而剛好）。
-          </p>
-        </article>
+    <section class="section alt">
+      <div class="container">
+        <h2 class="section-title">關於我</h2>
+        <p class="muted">
+          這裡放 3～6 行你最想讓人記住的內容：你擅長什麼、想解決什麼問題、你做過哪些成果。
+          之後也可以加上「經歷」與「技能清單」區塊。
+        </p>
 
-        <article class="card">
-          <h3 class="card-title">我正在做</h3>
-          <p class="card-text">
-            持續把專案內容補齊：作品、技能、聯絡方式，並把流程固定成 dev → PR → main。
-          </p>
-        </article>
+        <h2 class="section-title" style="margin-top: 28px;">我能做什麼</h2>
+        <p class="muted">
+          做出可展示的作品、乾淨的版面、清楚的導覽結構，並且用 Git 管理版本與部署。
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Novrise. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./pages/projects.html">Projects</a>
-        <a href="./pages/contact.html">Contact</a>
-      </div>
+      <span>© <span id="year"></span> Novrise. All rights reserved.</span>
+      <a class="footer-link" href="./pages/projects.html">Projects</a>
     </div>
   </footer>
 </body>

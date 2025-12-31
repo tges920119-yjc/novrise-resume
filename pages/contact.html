@@ -4,80 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact｜Novrise</title>
-  <meta name="description" content="聯絡 Novrise：Email、GitHub 與其他連結。" />
-  <link rel="icon" href="../assets/icons/logo.png" />
+  <meta name="description" content="Novrise 聯絡方式" />
+
   <link rel="stylesheet" href="../src/styles/main.css" />
   <script defer src="../src/main.js"></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Go to Home">
+      <a class="brand" href="../index.html" aria-label="回到首頁">
         <img class="brand-logo" src="../assets/icons/logo.png" alt="Novrise logo" />
-        <span class="brand-name">Novrise</span>
+        <span class="brand-text">Novrise</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav-link" href="../index.html" data-nav="home">Home</a>
-        <a class="nav-link" href="./projects.html" data-nav="projects">Projects</a>
-        <a class="nav-link" href="./contact.html" data-nav="contact">Contact</a>
+      <nav class="site-nav" aria-label="主選單">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="./projects.html">Projects</a>
+        <a class="nav-link is-active" href="./contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="page-head">
+  <main id="main" class="section">
+    <div class="container">
       <h1 class="page-title">Contact</h1>
-      <p class="page-desc">把最常用的聯絡方式放在這裡（建議 2～4 個就好）。</p>
-    </section>
+      <p class="muted">把下面三項改成你的真實資訊即可。</p>
 
-    <section class="grid single">
-      <article class="project">
-        <h2 class="project-title">聯絡資訊</h2>
-        <p class="project-desc">
-          你可以在這裡放 Email、GitHub、LinkedIn、或你的其他作品連結。
-        </p>
-
-        <div class="contact-list">
-          <div class="contact-item">
-            <div class="contact-label">GitHub</div>
-            <a class="contact-value" href="https://github.com/tges920119-yjc" target="_blank" rel="noreferrer">
-              github.com/tges920119-yjc
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-label">Email</div>
-            <a class="contact-value" href="mailto:yourname@example.com">
-              yourname@example.com
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-label">Website</div>
-            <a class="contact-value" href="https://tges920119-yjc.github.io/novrise-resume/" target="_blank" rel="noreferrer">
-              tges920119-yjc.github.io/novrise-resume
-            </a>
-          </div>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn small primary" href="../index.html">回首頁</a>
-          <a class="btn small" href="./projects.html">看 Projects</a>
-        </div>
-      </article>
-    </section>
+      <div class="card">
+        <h2 class="card-title">聯絡方式</h2>
+        <ul class="contact-list">
+          <li><b>Email：</b><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><b>GitHub：</b><a href="https://github.com/tges920119-yjc" target="_blank" rel="noreferrer">github.com/tges920119-yjc</a></li>
+          <li><b>LinkedIn：</b><a href="#" onclick="return false;">（可填）</a></li>
+        </ul>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Novrise. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./contact.html">Contact</a>
-      </div>
+      <span>© <span id="year"></span> Novrise. All rights reserved.</span>
+      <a class="footer-link" href="../index.html">Home</a>
     </div>
   </footer>
 </body>
