@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (function () {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -15,3 +16,7 @@
       pad(now.getMinutes());
   }
 })();
+
+const y = document.getElementById("year");
+if (y) y.textContent = new Date().getFullYear();
+>>>>>>> ade1589 (feat: add projects page)
