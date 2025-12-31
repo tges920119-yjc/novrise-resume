@@ -3,92 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Novrise | 履歷</title>
+  <title>Novrise｜個人履歷</title>
+  <meta name="description" content="Novrise 個人履歷網站：作品、技能與聯絡方式。" />
   <link rel="icon" href="./assets/icons/logo.png" />
   <link rel="stylesheet" href="./src/styles/main.css" />
+  <script defer src="./src/main.js"></script>
 </head>
 
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html">
-        <img class="brand-logo" src="./assets/icons/logo.png" alt="Novrise" />
+      <a class="brand" href="./index.html" aria-label="Go to Home">
+        <img class="brand-logo" src="./assets/icons/logo.png" alt="Novrise logo" />
         <span class="brand-name">Novrise</span>
       </a>
 
-      <nav class="nav">
-        <a href="./index.html" class="nav-link is-active">首頁</a>
-        <a href="./pages/projects.html" class="nav-link">作品集</a>
-        <a href="./pages/contact.html" class="nav-link">聯絡我</a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="./index.html" data-nav="home">Home</a>
+        <a class="nav-link" href="./pages/projects.html" data-nav="projects">Projects</a>
+        <a class="nav-link" href="./pages/contact.html" data-nav="contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Main -->
   <main class="container">
     <section class="hero">
-      <div class="hero-text">
+      <div class="hero-left">
         <p class="badge">Resume / Portfolio</p>
-        <h1>陳佑杰（alger.chen）</h1>
-        <p class="subtitle">
-          這裡是我的個人履歷網站：簡介、技能、作品集與聯絡方式。
+        <h1 class="hero-title">
+          嗨，我是 <span class="accent">Novrise</span><br />
+          我做可維護、可部署的網站作品
+        </h1>
+        <p class="hero-desc">
+          這個站點使用 Git + GitHub Pages 發佈。開發在 dev 分支，完成後用 PR 合併到 main。
+          <br />
+          你可以在 Projects 看到作品卡片與技術棧。
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="./pages/projects.html">看作品集</a>
+          <a class="btn primary" href="./pages/projects.html">看 Projects</a>
           <a class="btn" href="./pages/contact.html">聯絡我</a>
         </div>
 
-        <ul class="quick">
-          <li>📍 Taiwan</li>
-          <li>🧩 Web / Infra / Automation</li>
-          <li>🛠️ GitHub + Nginx + MariaDB（可延伸）</li>
-        </ul>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <div class="mini-title">技能</div>
+            <div class="mini-text">HTML / CSS / JavaScript / Git</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-title">部署</div>
+            <div class="mini-text">GitHub Pages</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-title">流程</div>
+            <div class="mini-text">dev → PR → main</div>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-card">
-        <h2>目前進度</h2>
-        <ol>
-          <li>專案初始化 & 分支：完成</li>
-          <li>目錄結構：完成</li>
-          <li>首頁：進行中 ✅</li>
-          <li>作品集頁 / 聯絡頁：下一步</li>
-        </ol>
+      <div class="hero-right">
+        <div class="panel">
+          <h2 class="panel-title">快速導覽</h2>
+          <ul class="panel-list">
+            <li>✅ 首頁：簡介 + 入口</li>
+            <li>✅ Projects：作品卡片（Live / Code）</li>
+            <li>✅ Contact：聯絡資訊</li>
+          </ul>
+
+          <div class="panel-note">
+            <div class="note-title">下一步建議</div>
+            <div class="note-text">
+              把 Projects 的第二張卡片改成你的真實專案（名稱、描述、技術、連結）。
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Sections -->
-    <section class="grid">
-      <article class="card">
-        <h3>關於我</h3>
-        <p>用 3~5 句話描述你做過什麼、擅長什麼、想往哪裡走。</p>
-      </article>
+    <section class="section">
+      <h2 class="section-title">關於我</h2>
+      <p class="section-desc">
+        這裡放 3～6 行你最想讓人記住的內容：你擅長什麼、想解決什麼問題、你做過哪些成果。
+        之後也可以加上「經歷」與「技能清單」等區塊。
+      </p>
 
-      <article class="card">
-        <h3>技能</h3>
-        <ul>
-          <li>Git / GitHub</li>
-          <li>HTML / CSS / JavaScript</li>
-          <li>Nginx / Linux</li>
-          <li>MariaDB（可選）</li>
-        </ul>
-      </article>
+      <div class="card-row">
+        <article class="card">
+          <h3 class="card-title">我能做什麼</h3>
+          <p class="card-text">
+            做出可展示的作品、乾淨的版面、清楚的導覽結構，並且用 Git 管理版本與部署。
+          </p>
+        </article>
 
-      <article class="card">
-        <h3>近期作品（預告）</h3>
-        <p>之後在「作品集」頁面放你的專案列表與截圖。</p>
-      </article>
+        <article class="card">
+          <h3 class="card-title">我重視什麼</h3>
+          <p class="card-text">
+            結構清楚、維護容易、改版不痛苦（檔案切分、CSS 可重用、JS 少而剛好）。
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">我正在做</h3>
+          <p class="card-text">
+            持續把專案內容補齊：作品、技能、聯絡方式，並把流程固定成 dev → PR → main。
+          </p>
+        </article>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="y"></span> Novrise</span>
-      <a href="https://github.com/tges920119-yjc" target="_blank" rel="noreferrer">GitHub</a>
+      <div>© <span id="year"></span> Novrise. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./pages/projects.html">Projects</a>
+        <a href="./pages/contact.html">Contact</a>
+      </div>
     </div>
   </footer>
-
-  <script src="./src/main.js"></script>
 </body>
 </html>
