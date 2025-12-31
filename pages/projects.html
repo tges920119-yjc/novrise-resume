@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects｜NOVRISE</title>
+  <link rel="stylesheet" href="../src/styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../assets/icons/logo.png" alt="NOVRISE logo" />
+        <span class="brand-text">NOVRISE</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link is-active" href="./projects.html">Projects</a>
+        <a class="nav-link" href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">Projects</h1>
+      <p class="hero-subtitle">挑幾個代表作：我做了什麼、用了什麼、解決了什麼。</p>
+    </section>
+
+    <section class="section">
+      <div class="toolbar">
+        <input id="projectSearch" class="input" type="search" placeholder="搜尋專案（關鍵字：NAS / Web / DB ...）" />
+        <div class="chips">
+          <button class="chip is-active" data-filter="all" type="button">全部</button>
+          <button class="chip" data-filter="web" type="button">Web</button>
+          <button class="chip" data-filter="db" type="button">DB</button>
+          <button class="chip" data-filter="infra" type="button">Infra</button>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="grid">
+        <!-- Project Card 1 -->
+        <article class="card" data-tags="web infra">
+          <div class="card-header">
+            <h2 class="card-title">個人履歷站｜NOVRISE</h2>
+            <span class="badge">Web</span>
+          </div>
+          <p class="card-desc">
+            使用純 HTML / CSS / JS 建立靜態履歷網站，並透過 GitHub Pages 部署上線。
+          </p>
+          <ul class="meta">
+            <li>重點：導覽、頁面結構、部署流程</li>
+            <li>技術：HTML / CSS / JS / GitHub Pages</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn" href="https://tges920119-yjc.github.io/novrise-resume/" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn btn-ghost" href="https://github.com/tges920119-yjc/novrise-resume" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="card" data-tags="db">
+          <div class="card-header">
+            <h2 class="card-title">預約查詢系統（規劃中）</h2>
+            <span class="badge badge-alt">DB</span>
+          </div>
+          <p class="card-desc">
+            目標：可登入、可查詢行程、可預約。先做資料表設計與 API 規格，再逐步串前端。
+          </p>
+          <ul class="meta">
+            <li>重點：資料表、欄位、查詢效能</li>
+            <li>技術：MariaDB（預計）</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-ghost" href="#" onclick="alert('之後我們會加上設計文件/畫面');return false;">Design</a>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="card" data-tags="infra">
+          <div class="card-header">
+            <h2 class="card-title">家用 Lab：NAS / VM / 備份流程</h2>
+            <span class="badge">Infra</span>
+          </div>
+          <p class="card-desc">
+            整合 NAS、虛擬機、容器與備份策略，讓服務可以長期穩定運作、可恢復。
+          </p>
+          <ul class="meta">
+            <li>重點：備份策略、權限、部署一致性</li>
+            <li>技術：Proxmox / TrueNAS / Docker（依你實作調整）</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-ghost" href="#" onclick="alert('之後可補上架構圖與步驟');return false;">Notes</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">下一步我可以幫你做</h2>
+      <ol class="list">
+        <li>每個 Project 卡片加上「截圖」與「成果數據」</li>
+        <li>把 Projects 做成可排序（最新/最完整/最相關）</li>
+        <li>做一頁 Case Study（單一專案詳細頁）</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> NOVRISE</span>
+      <span class="muted">Built with HTML/CSS/JS</span>
+    </div>
+  </footer>
+
+  <script src="../src/main.js"></script>
+  <script>
+    // projects page: filter + search
+    (function () {
+      const grid = document.getElementById("projectGrid");
+      const cards = Array.from(grid.querySelectorAll(".card"));
+      const search = document.getElementById("projectSearch");
+      const chips = Array.from(document.querySelectorAll(".chip"));
+
+      let activeFilter = "all";
+      let keyword = "";
+
+      function apply() {
+        const k = keyword.trim().toLowerCase();
+        cards.forEach(card => {
+          const tags = (card.getAttribute("data-tags") || "").split(/\s+/);
+          const text = card.innerText.toLowerCase();
+
+          const okFilter = activeFilter === "all" || tags.includes(activeFilter);
+          const okKeyword = k === "" || text.includes(k);
+
+          card.style.display = (okFilter && okKeyword) ? "" : "none";
+        });
+      }
+
+      chips.forEach(btn => {
+        btn.addEventListener("click", () => {
+          chips.forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          activeFilter = btn.getAttribute("data-filter");
+          apply();
+        });
+      });
+
+      search.addEventListener("input", () => {
+        keyword = search.value;
+        apply();
+      });
+
+      // initial
+      apply();
+    })();
+  </script>
+</body>
+</html>
