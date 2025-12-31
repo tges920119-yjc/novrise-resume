@@ -27,3 +27,45 @@
 .btn { display: inline-block; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(0,0,0,.15); text-decoration: none; }
 .btn-ghost { background: transparent; }
 .muted { opacity: .7; }
+
+/* ===== Logo safe sizing (prevent 1024x1024 from blowing up) ===== */
+.logo {
+  width: 40px;          /* 你想要的顯示大小：40/48/56 都可以 */
+  height: 40px;
+  display: block;
+  object-fit: contain;  /* 圖片維持比例塞進去 */
+}
+
+/* 如果 logo 放在 a 裡面（常見）也保險 */
+a .logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container { width: min(1000px, calc(100% - 32px)); margin: 0 auto; }
+
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.brand-name { font-weight: 700; }
+
+.nav { display: flex; gap: 14px; }
+.nav a { text-decoration: none; color: inherit; opacity: .8; }
+.nav a.active { opacity: 1; font-weight: 700; }
+
+.page-title { padding: 24px 0 10px; }
+.muted { opacity: .7; }
+
+.grid { display: grid; gap: 16px; }
+.projects-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.card { border: 1px solid #eee; border-radius: 14px; padding: 16px; background: #fff; }
+.tags { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { border: 1px solid #eee; border-radius: 999px; padding: 6px 10px; font-size: 12px; opacity: .85; }
+
+.actions { display: flex; gap: 10px; margin-top: 14px; }
+.btn { display: inline-block; padding: 10px 12px; border-radius: 10px; border: 1px solid #111; text-decoration: none; color: #111; }
+.btn.ghost { border-color: #ddd; }
+.site-footer { border-top: 1px solid #eee; margin-top: 30px; padding: 16px 0; }
+
