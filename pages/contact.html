@@ -1,26 +1,21 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact｜Novrise</title>
-  <meta name="description" content="Novrise 聯絡方式" />
-
-  <link rel="stylesheet" href="../src/styles/main.css" />
-  <script defer src="../src/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Novrise</title>
+  <link rel="icon" href="../assets/icons/logo.png">
+  <link rel="stylesheet" href="../src/styles/main.css">
 </head>
-
 <body>
-  <a class="skip-link" href="#main">跳到主要內容</a>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="回到首頁">
-        <img class="brand-logo" src="../assets/icons/logo.png" alt="Novrise logo" />
-        <span class="brand-text">Novrise</span>
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../assets/icons/logo.png" alt="Logo">
+        <span class="brand-name">NOVRISE</span>
       </a>
 
-      <nav class="site-nav" aria-label="主選單">
+      <nav class="nav">
         <a class="nav-link" href="../index.html">Home</a>
         <a class="nav-link" href="./projects.html">Projects</a>
         <a class="nav-link is-active" href="./contact.html">Contact</a>
@@ -28,27 +23,65 @@
     </div>
   </header>
 
-  <main id="main" class="section">
-    <div class="container">
-      <h1 class="page-title">Contact</h1>
-      <p class="muted">把下面三項改成你的真實資訊即可。</p>
-
-      <div class="card">
-        <h2 class="card-title">聯絡方式</h2>
-        <ul class="contact-list">
-          <li><b>Email：</b><a href="mailto:you@example.com">you@example.com</a></li>
-          <li><b>GitHub：</b><a href="https://github.com/tges920119-yjc" target="_blank" rel="noreferrer">github.com/tges920119-yjc</a></li>
-          <li><b>LinkedIn：</b><a href="#" onclick="return false;">（可填）</a></li>
-        </ul>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="h1">Contact</h1>
+        <p class="lead">聯絡方式與簡介（大頭貼路徑已修正）。</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="profile-card">
+          <img class="headshot" src="../assets/img/headshot.jpg" alt="Headshot">
+          <div class="profile-body">
+            <div class="profile-name">陳佑杰</div>
+            <div class="profile-sub">Web • Infra • Automation</div>
+
+            <div class="tag-row">
+              <span class="tag">Taiwan</span>
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Open to collaborate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h2 class="h2">Get in touch</h2>
+          <p class="muted">你可以先把以下連結換成你的真實資訊。</p>
+
+          <div class="kv">
+            <div class="kv-row">
+              <div class="kv-k">Email</div>
+              <div class="kv-v"><a class="link" href="#" onclick="return false;">yourname@email.com</a></div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-k">GitHub</div>
+              <div class="kv-v"><a class="link" href="#" onclick="return false;">github.com/yourname</a></div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-k">LinkedIn</div>
+              <div class="kv-v"><a class="link" href="#" onclick="return false;">linkedin.com/in/yourname</a></div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href="../index.html">回 Home</a>
+            <a class="btn primary" href="./projects.html">看 Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Novrise. All rights reserved.</span>
-      <a class="footer-link" href="../index.html">Home</a>
+      <span>© <span id="year"></span> NOVRISE</span>
+      <span class="muted">Contact</span>
     </div>
   </footer>
+
+  <script src="../src/main.js"></script>
 </body>
 </html>

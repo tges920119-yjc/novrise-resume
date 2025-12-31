@@ -1,32 +1,21 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects｜Novrise</title>
-
-  <!-- ⚠️ 關鍵：pages 底下，一定要用 ../ -->
-  <link rel="stylesheet" href="../src/styles/main.css" />
-  <script defer src="../src/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Novrise</title>
+  <link rel="icon" href="../assets/icons/logo.png">
+  <link rel="stylesheet" href="../src/styles/main.css">
 </head>
-
 <body>
-  <!-- Skip link -->
-  <a class="skip-link" href="#main">跳到主要內容</a>
-
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html">
-        <img
-          class="brand-logo"
-          src="../assets/icons/logo.png"
-          alt="Novrise logo"
-        />
-        <span class="brand-text">Novrise</span>
+        <img class="brand-logo" src="../assets/icons/logo.png" alt="Logo">
+        <span class="brand-name">NOVRISE</span>
       </a>
 
-      <nav class="site-nav">
+      <nav class="nav">
         <a class="nav-link" href="../index.html">Home</a>
         <a class="nav-link is-active" href="./projects.html">Projects</a>
         <a class="nav-link" href="./contact.html">Contact</a>
@@ -34,90 +23,114 @@
     </div>
   </header>
 
-  <!-- Main -->
-  <main id="main" class="section">
-    <div class="container">
-      <h1 class="page-title">Projects</h1>
-      <p class="muted">
-        挑幾個代表作，包含你負責的內容、技術與成果。
-      </p>
-
-      <div class="grid">
-        <!-- Project 1 -->
-        <article class="project-card">
-          <div class="project-head">
-            <h2 class="project-title">履歷網站（GitHub Pages）</h2>
-            <p class="project-subtitle">
-              靜態網站 / 版本控制 / 分支流程
-            </p>
-          </div>
-
-          <p class="project-desc">
-            建立個人履歷站，使用 dev 分支開發，透過 PR 合併到 main，
-            並部署至 GitHub Pages。
-          </p>
-
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub Pages</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn small primary" href="../index.html">
-              Live
-            </a>
-            <a
-              class="btn small"
-              href="https://github.com/tges920119-yjc/novrise-resume"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Code
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card">
-          <div class="project-head">
-            <h2 class="project-title">（你的第二個專案）</h2>
-            <p class="project-subtitle">
-              一句話定位（例：預約系統 / 管理台）
-            </p>
-          </div>
-
-          <p class="project-desc">
-            簡述你做了什麼、解了什麼問題、成果是什麼。
-          </p>
-
-          <div class="tags">
-            <span class="tag">技術 1</span>
-            <span class="tag">技術 2</span>
-            <span class="tag">技術 3</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn small primary" href="#" onclick="return false;">
-              Live
-            </a>
-            <a class="btn small" href="#" onclick="return false;">
-              Code
-            </a>
-          </div>
-        </article>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="h1">Projects</h1>
+        <p class="lead">可展開卡片（Expand）＋ 標籤（Tags）＋ 連結（Links）。</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="project-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card" data-expandable>
+            <div class="project-top">
+              <div class="project-title-row">
+                <h3 class="h3">Resume / Portfolio Website</h3>
+                <span class="badge">Live</span>
+              </div>
+
+              <p class="project-desc">
+                GitHub Pages 上的靜態履歷網站，含 Projects / Contact，支援擴充與維護。
+              </p>
+
+              <div class="tag-row">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub Pages</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn small primary" href="../index.html">Open Home</a>
+                <a class="btn small" href="./contact.html">Contact</a>
+                <button class="btn small ghost" type="button" data-expand-btn>
+                  展開細節
+                </button>
+              </div>
+            </div>
+
+            <div class="project-expand" data-expand-panel>
+              <div class="divider"></div>
+              <ul class="list">
+                <li>整理目錄結構，統一路徑引用（/pages 對 ../src、../assets）。</li>
+                <li>Projects 使用 expandable card，後續可加更多專案。</li>
+                <li>可擴充：加入動畫、更多區塊、SEO、OpenGraph。</li>
+              </ul>
+
+              <div class="link-row">
+                <span class="muted">Links：</span>
+                <a class="link" href="../index.html">Site</a>
+                <a class="link" href="./projects.html">This Page</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 (Template) -->
+          <article class="project-card" data-expandable>
+            <div class="project-top">
+              <div class="project-title-row">
+                <h3 class="h3">Project Template (Placeholder)</h3>
+                <span class="badge ghost">Draft</span>
+              </div>
+
+              <p class="project-desc">
+                先放模板，之後你要新增專案只要複製此卡片並改內容/標籤/連結即可。
+              </p>
+
+              <div class="tag-row">
+                <span class="tag">TODO</span>
+                <span class="tag">Feature</span>
+                <span class="tag">Roadmap</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn small" href="#" onclick="return false;">Demo</a>
+                <a class="btn small" href="#" onclick="return false;">Repo</a>
+                <button class="btn small ghost" type="button" data-expand-btn>
+                  展開細節
+                </button>
+              </div>
+            </div>
+
+            <div class="project-expand" data-expand-panel>
+              <div class="divider"></div>
+              <p class="muted">
+                這裡放專案亮點、負責項目、技術細節、遇到的問題與解法、效能指標等。
+              </p>
+              <ul class="list">
+                <li>亮點 1：……</li>
+                <li>亮點 2：……</li>
+                <li>技術：……</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Novrise</span>
-      <a class="footer-link" href="../index.html">Home</a>
+      <span>© <span id="year"></span> NOVRISE</span>
+      <span class="muted">Projects</span>
     </div>
   </footer>
+
+  <script src="../src/main.js"></script>
 </body>
 </html>

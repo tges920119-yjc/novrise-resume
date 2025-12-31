@@ -1,27 +1,21 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Novrise｜Resume / Portfolio</title>
-  <meta name="description" content="Novrise 的履歷 / 作品集網站（Git + GitHub Pages + 分支流程）" />
-
-  <!-- ✅ root: ./src/... -->
-  <link rel="stylesheet" href="./src/styles/main.css" />
-  <script defer src="./src/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Novrise Resume</title>
+  <link rel="icon" href="./assets/icons/logo.png">
+  <link rel="stylesheet" href="./src/styles/main.css">
 </head>
-
 <body>
-  <a class="skip-link" href="#main">跳到主要內容</a>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html" aria-label="回到首頁">
-        <img class="brand-logo" src="./assets/icons/logo.png" alt="Novrise logo" />
-        <span class="brand-text">Novrise</span>
+      <a class="brand" href="./index.html">
+        <img class="brand-logo" src="./assets/icons/logo.png" alt="Logo">
+        <span class="brand-name">NOVRISE</span>
       </a>
 
-      <nav class="site-nav" aria-label="主選單">
+      <nav class="nav">
         <a class="nav-link is-active" href="./index.html">Home</a>
         <a class="nav-link" href="./pages/projects.html">Projects</a>
         <a class="nav-link" href="./pages/contact.html">Contact</a>
@@ -29,38 +23,56 @@
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Resume / Portfolio</p>
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="pill">Resume / Portfolio</p>
+          <h1 class="h1">陳佑杰<br><span class="muted">YJC</span></h1>
+          <p class="lead">
+            這裡是我的個人履歷與作品集網站。包含專案展示、技能標籤與聯絡方式。
+          </p>
 
-        <h1 class="hero-title">
-          嗨，我是 <span class="accent">Novrise</span><br />
-          我做可維護、可部署的網站作品
-        </h1>
+          <div class="cta-row">
+            <a class="btn primary" href="./pages/projects.html">查看 Projects</a>
+            <a class="btn" href="./pages/contact.html">聯絡我</a>
+          </div>
 
-        <p class="hero-desc">
-          這個站點使用 Git + GitHub Pages 發佈。開發在 <b>dev</b> 分支，完成後用 PR 合併到 <b>main</b>。
-          你可以在 Projects 看到作品卡片與技術棧。
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn primary" href="./pages/projects.html">看 Projects</a>
-          <a class="btn" href="./pages/contact.html">聯絡我</a>
+          <div class="meta-grid">
+            <div class="meta-card">
+              <div class="meta-title">Focus</div>
+              <div class="meta-value">Web / Infra / Automation</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Stack</div>
+              <div class="meta-value">JS / Python / MariaDB</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Goal</div>
+              <div class="meta-value">可維護、可擴充、可部署</div>
+            </div>
+          </div>
         </div>
 
-        <div class="hero-grid">
-          <div class="card">
-            <h2 class="card-title">技能</h2>
-            <p class="card-text">HTML / CSS / JavaScript / Git</p>
+        <div class="hero-right">
+          <div class="profile-card">
+            <img class="headshot" src="./assets/img/headshot.jpg" alt="Headshot">
+            <div class="profile-body">
+              <div class="profile-name">陳佑杰</div>
+              <div class="profile-sub">Portfolio • GitHub Pages</div>
+
+              <div class="quick-links">
+                <a class="chip" href="./pages/projects.html">Projects</a>
+                <a class="chip" href="./pages/contact.html">Contact</a>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <h2 class="card-title">部署</h2>
-            <p class="card-text">GitHub Pages</p>
-          </div>
-          <div class="card">
-            <h2 class="card-title">流程</h2>
-            <p class="card-text">dev → PR → main</p>
+
+          <div class="note-card">
+            <div class="note-title">狀態</div>
+            <p class="note-text">
+              目前先以「能正常顯示與導航」為主，後續再逐步加內容與細節。
+            </p>
           </div>
         </div>
       </div>
@@ -68,43 +80,26 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">快速導覽</h2>
-        <ul class="checklist">
-          <li>✅ Home：簡介 + 入口</li>
-          <li>✅ Projects：作品卡（Live / Code）</li>
-          <li>✅ Contact：聯絡資訊</li>
-        </ul>
-
-        <div class="callout">
-          <h3 class="callout-title">下一步建議</h3>
-          <p class="callout-text">
-            把 Projects 的第二張卡片改成你的真實專案（名稱、描述、技術、連結）。
-          </p>
+        <h2 class="h2">Skills</h2>
+        <div class="tag-row">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">MariaDB</span>
         </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container">
-        <h2 class="section-title">關於我</h2>
-        <p class="muted">
-          這裡放 3～6 行你最想讓人記住的內容：你擅長什麼、想解決什麼問題、你做過哪些成果。
-          之後也可以加上「經歷」與「技能清單」區塊。
-        </p>
-
-        <h2 class="section-title" style="margin-top: 28px;">我能做什麼</h2>
-        <p class="muted">
-          做出可展示的作品、乾淨的版面、清楚的導覽結構，並且用 Git 管理版本與部署。
-        </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Novrise. All rights reserved.</span>
-      <a class="footer-link" href="./pages/projects.html">Projects</a>
+      <span>© <span id="year"></span> NOVRISE</span>
+      <span class="muted">Built with GitHub Pages</span>
     </div>
   </footer>
+
+  <script src="./src/main.js"></script>
 </body>
 </html>
