@@ -1,22 +1,18 @@
-<<<<<<< HEAD
 (function () {
+  // footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  const buildEl = document.getElementById("buildInfo");
-  if (buildEl) {
-    const now = new Date();
-    const pad = (n) => String(n).padStart(2, "0");
-    buildEl.textContent =
-      "Build: " +
-      now.getFullYear() + "-" +
-      pad(now.getMonth() + 1) + "-" +
-      pad(now.getDate()) + " " +
-      pad(now.getHours()) + ":" +
-      pad(now.getMinutes());
-  }
-})();
+  // active nav (based on URL)
+  const path = (location.pathname || "").toLowerCase();
 
-const y = document.getElementById("year");
-if (y) y.textContent = new Date().getFullYear();
->>>>>>> ade1589 (feat: add projects page)
+  function setActive(key) {
+    document.querySelectorAll(".nav-link").forEach((a) => {
+      if (a.dataset.nav === key) a.classList.add("active");
+    });
+  }
+
+  if (path.endsWith("/projects.html") || path.includes("/pages/projects.html")) setActive("projects");
+  else if (path.endsWith("/contact.html") || path.includes("/pages/contact.html")) setActive("contact");
+  else setActive("home");
+})();
