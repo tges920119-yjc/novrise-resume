@@ -16,9 +16,9 @@
       </a>
 
       <nav class="nav">
-        <a class="nav-link" href="../index.html">Home</a>
-        <a class="nav-link is-active" href="./projects.html">Projects</a>
-        <a class="nav-link" href="./contact.html">Contact</a>
+        <a class="nav-link" href="../index.html">首頁</a>
+        <a class="nav-link is-active" href="./projects.html">專案</a>
+        <a class="nav-link" href="./contact.html">關於我</a>
       </nav>
     </div>
   </header>
@@ -26,7 +26,7 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <h1 class="h1">Projects</h1>
+        <h1 class="h1">專案</h1>
         <p class="lead">可展開卡片（Expand）＋ 標籤（Tags）＋ 連結（Links）。</p>
       </div>
     </section>
@@ -37,47 +37,64 @@
 
           <!-- Project 1 -->
           <article class="project-card" data-expandable>
-            <div class="project-top">
-              <div class="project-title-row">
-                <h3 class="h3">Resume / Portfolio Website</h3>
-                <span class="badge">Live</span>
-              </div>
+			<div class="project-top">
+				<div class="project-title-row">
+					<h3 class="h3">Sports Court Booking System</h3>
+					<span class="badge">Backend Ready</span>
+				</div>
 
-              <p class="project-desc">
-                GitHub Pages 上的靜態履歷網站，含 Projects / Contact，支援擴充與維護。
-              </p>
+				<p class="project-desc">
+				  前後端分離的運動場地預約系統，實作即時預約、取消與重複預約防護，著重後端架構與資料一致性。
+				</p>
 
-              <div class="tag-row">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">GitHub Pages</span>
-              </div>
+				<div class="tag-row">
+				  <span class="tag">FastAPI</span>
+				  <span class="tag">Python</span>
+				  <span class="tag">MySQL</span>
+				  <span class="tag">REST API</span>
+				  <span class="tag">Backend</span>
+				</div>
 
-              <div class="project-actions">
-                <a class="btn small primary" href="../index.html">Open Home</a>
-                <a class="btn small" href="./contact.html">Contact</a>
-                <button class="btn small ghost" type="button" data-expand-btn>
-                  展開細節
-                </button>
-              </div>
-            </div>
+				<div class="project-actions">
 
-            <div class="project-expand" data-expand-panel>
-              <div class="divider"></div>
-              <ul class="list">
-                <li>整理目錄結構，統一路徑引用（/pages 對 ../src、../assets）。</li>
-                <li>Projects 使用 expandable card，後續可加更多專案。</li>
-                <li>可擴充：加入動畫、更多區塊、SEO、OpenGraph。</li>
-              </ul>
+				  <button class="btn small ghost" type="button" data-expand-btn>
+					展開細節
+				  </button>
+				</div>
+			  </div>
 
-              <div class="link-row">
-                <span class="muted">Links：</span>
-                <a class="link" href="../index.html">Site</a>
-                <a class="link" href="./projects.html">This Page</a>
-              </div>
-            </div>
-          </article>
+			  <div class="project-expand" data-expand-panel>
+				<div class="divider"></div>
+
+				<ul class="list">
+				  <li>使用 FastAPI 建立 RESTful API，清楚分離前後端責任。</li>
+				  <li>資料庫設計加入唯一索引（場地 + 時段），防止重複預約。</li>
+				  <li>支援預約取消，並限制已過期時段不可操作。</li>
+				  <li>專案結構模組化，方便後續擴充前端、會員或權限系統。</li>
+				</ul>
+
+				<div class="link-row">
+				  <span class="muted">Links：</span>
+				  <a
+					class="link"
+					href="https://booking.novrise.org/"
+					target="_blank"
+					rel="noopener"
+				  >
+					專案網站
+				  </a>
+				  <a
+					class="link"
+					href="https://github.com/tges920119-yjc/SportCenter"
+					target="_blank"
+					rel="noopener"
+				  >
+					GitHub
+				  </a>
+				</div>
+			  </div>
+			</article>
+
 
           <!-- Project 2 (Template) -->
           <article class="project-card" data-expandable>
