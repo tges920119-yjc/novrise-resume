@@ -1,10 +1,20 @@
-// Year in footer
+// 1. Loading 動畫控制
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('is-hidden');
+    }, 800);
+  }
+});
+
+// 2. 自動更新 Footer 年份
 (() => {
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 })();
 
-// Expandable project cards
+// 3. 專案卡片展開/收合功能
 (() => {
   const cards = document.querySelectorAll("[data-expandable]");
   if (!cards.length) return;
