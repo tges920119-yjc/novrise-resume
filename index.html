@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Novrise Resume</title>
+  <title>陳佑杰的履歷網站</title>
   <link rel="icon" href="./assets/icons/logo.png">
   <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
-  <header class="site-header">
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <div class="loading-text">歡迎來到我的履歷網站</div>
+    </div>
+  </div>
+
+  <header class="site-header"> 
     <div class="container header-inner">
       <a class="brand" href="./index.html">
         <img class="brand-logo" src="./assets/icons/logo.png" alt="Logo">
-        <span class="brand-name">NOVRISE</span>
+        <span class="brand-name">陳佑杰的履歷網站</span>
       </a>
 
       <nav class="nav">
@@ -27,11 +34,25 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-left">
-          <p class="pill">Resume / Portfolio</p>
           <h1 class="h1">陳佑杰<br><span class="muted">YOUCHIEH CHEN</span></h1>
-          <p class="lead">
-            這裡是我的個人履歷與作品集網站。包含專案展示、技能標籤與聯絡方式。
-          </p>
+          <div class="about-content lead">
+            <p>
+              在長期負責資訊設備與系統維運的過程中，我發現許多實務問題並不只來自硬體或設備本身，
+              而是與系統流程、軟體設計與資料處理密切相關。
+            </p>
+
+            <p>
+              因此開始主動投入軟體開發領域，利用下班與空閒時間進行專案實作，
+              從後端 API、資料庫設計到前端畫面與資料串接，
+              逐步建立全端開發能力。
+            </p>
+
+            <p>
+              目前也善用 <strong>AI 工具</strong> 輔助開發與學習，
+              加速理解系統架構設計與問題解決流程，
+              目標成為能結合實務現場經驗與軟體開發能力的全端工程師。
+            </p>
+          </div>
 
           <div class="cta-row">
             <a class="btn primary" href="./pages/projects.html">查看專案</a>
@@ -49,7 +70,7 @@
             </div>
             <div class="meta-card">
               <div class="meta-title">Goal</div>
-              <div class="meta-value">可維護、可擴充、可部署</div>
+              <div class="meta-value">可維護、可部署</div>
             </div>
           </div>
         </div>
@@ -59,20 +80,11 @@
             <img class="headshot" src="./assets/img/headshot.jpg" alt="Headshot">
             <div class="profile-body">
               <div class="profile-name">陳佑杰</div>
-              <div class="profile-sub">Portfolio • GitHub Pages</div>
-
+              <div class="profile-sub">Web Developer</div>
               <div class="quick-links">
-                <a class="chip" href="./pages/projects.html">Projects</a>
-                <a class="chip" href="./pages/contact.html">Contact</a>
+                <a class="chip" href="https://github.com/tges920119-yjc">GitHub</a>
               </div>
             </div>
-          </div>
-
-          <div class="note-card">
-            <div class="note-title">狀態</div>
-            <p class="note-text">
-              目前先以「能正常顯示與導航」為主，後續再逐步加內容與細節。
-            </p>
           </div>
         </div>
       </div>
@@ -80,14 +92,70 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="h2">Skills</h2>
+        <h2 class="h2">Work Experience</h2>
+        <div class="experience-list">
+          
+          <div class="exp-item">
+            <div class="exp-date">2025.12 — 2026.01</div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <h3 class="exp-company">冠羿驗證股份有限公司 管理部/資訊人員</h3>
+                <span class="exp-title">資訊設備與系統維運工程師</span>
+              </div>
+              <ul class="exp-details">
+                <li>在第二份工作期間，於完成既有工作與維運任務之餘，持續投入個人網站與全端專案的開發。</li>
+                <li>從需求規劃、系統架構設計到實際開發與測試，皆以實務導向為主，並透過 AI 工具輔助提升開發效率與問題分析能力。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">2021.06 — 2025.07</div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <h3 class="exp-company">大將作工業股份有限公司 廠務部/資訊助理</h3>
+                <span class="exp-title">資訊設備與系統維運工程師 IT Operations / Systems Support Engineer</span>
+              </div>
+              <ul class="exp-details">
+                <li>負責公司整體資訊設備與網路環境之維運與規劃，涵蓋辦公室、工程工地與新廠區建置，確保系統與設備穩定運作。</li>
+                <li>工作內容包含企業資訊設備（電腦、影印機、刷卡機等）問題排除、工程工地工務所網路環境之申請與建置、現場佈線與設備設定，並協調外部廠商（中華電信、設備供應商）進行線路申請、安裝與後續維護。</li>
+                <li>同時追蹤新廠區與辦公室規劃中弱電相關事項，協助公司軟體授權到期管理與續約作業，並作為跨部門溝通窗口，快速定位問題、降低營運中斷風險。</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Skills & Tools</h2>
+
+        <h3 class="h3">Programming & Web Development</h3>
         <div class="tag-row">
-          <span class="tag">JavaScript</span>
+          <span class="tag">HTML / CSS / JavaScript</span>
           <span class="tag">Python</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Linux</span>
-          <span class="tag">Nginx</span>
-          <span class="tag">MariaDB</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">RESTful API</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Git / GitHub</span>
+        </div>
+
+        <h3 class="h3">Infrastructure & Deployment</h3>
+        <div class="tag-row">
+          <span class="tag">Linux Server Administration</span>
+          <span class="tag">Proxmox (VM / Container)</span>
+          <span class="tag">TrueNAS (Storage & Backup)</span>
+          <span class="tag">Cloudflare (DNS / SSL / Security)</span>
+        </div>
+
+        <h3 class="h3">Systems & Operations</h3>
+        <div class="tag-row">
+          <span class="tag">IT Operations</span>
+          <span class="tag">Network Setup & Troubleshooting</span>
+          <span class="tag">Incident & Root Cause Analysis</span>
+          <span class="tag">Vendor Coordination</span>
         </div>
       </div>
     </section>
